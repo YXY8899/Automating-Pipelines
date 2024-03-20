@@ -1,0 +1,16 @@
+{
+    "name": "bird_sink_connector",
+    "config": {
+      "name": "bird_sink_connector",
+      "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+      "transforms": "",
+      "topics": "BIRD_COMBINED",
+      "connection.url": "jdbc:postgresql://svc-postgres-headless:5432/postgres",
+      "connection.user": "postgres",
+      "connection.password": "plschangemepls",
+      "auto.create": "true",
+      "value.converter.schemas.enable": "true", 
+      "value.converter": "io.confluent.connect.avro.AvroConverter",
+      "value.converter.schema.registry.url": "http://svc-schemaregistry-headless.starlake-kafka:8081"
+    }
+}

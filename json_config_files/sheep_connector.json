@@ -1,0 +1,18 @@
+{
+    "name": "sheep_connector",
+    "config": {
+      "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+      "connection.url": "jdbc:postgresql://svc-postgres-headless:5432/postgres",
+      "connection.user": "postgres",
+      "connection.password": "plschangemepls",
+      "table.whitelist": "sheeps",
+      "mode": "incrementing",
+      "incrementing.column.name": "id",
+      "key.converter.schemas.enable": "true",
+      "key.converter": "io.confluent.connect.avro.AvroConverter", 
+      "key.converter.schema.registry.url": "http://svc-schemaregistry-headless.starlake-kafka:8081",  
+      "value.converter.schemas.enable": "true", 
+      "value.converter": "io.confluent.connect.avro.AvroConverter",
+      "value.converter.schema.registry.url": "http://svc-schemaregistry-headless.starlake-kafka:8081"
+    }
+}

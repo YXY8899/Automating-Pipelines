@@ -1,0 +1,4 @@
+{
+    "schema": "{\"connect.name\":\"sheeps\",\"type\":\"record\",\"name\":\"sheeps\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"},{\"name\":\"farm\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"sheep_id\",\"type\":[\"null\",\"int\"],\"default\":null},{\"name\":\"longitude\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"latitude\",\"type\":[\"null\",\"double\"],\"default\":null},{\"name\":\"date_time\",\"type\":[\"null\",{\"connect.name\":\"org.apache.kafka.connect.data.Timestamp\",\"connect.version\":1,\"logicalType\":\"timestamp-millis\",\"type\":\"long\"}],\"default\":null},{\"name\":\"file_path\",\"type\":[\"null\",\"string\"],\"default\":null}]}",
+    "schemaType": "AVRO"
+}
